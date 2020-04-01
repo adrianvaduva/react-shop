@@ -1,14 +1,24 @@
 import React from 'react';
 import Layout from "../components/Layout";
+import HomeCategory from "../components/HomeCategory";
 
-function Home() {
-    return(
-        <div>
+class Home extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            categories: []
+        }
+    }
+
+    render() {
+        return (
             <Layout>
-                <h1>Home</h1>
+                <div className="container-fluid d-flex">
+                    <HomeCategory/>
+                </div>
             </Layout>
-        </div>
-    );
+        );
+    }
 }
 
 export default Home;

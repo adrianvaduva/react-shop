@@ -16,6 +16,7 @@ class App extends React.Component {
                     <Route path='/category/:name' component={Category}/>
                     <Route path='/login' component={Login}/>
                     <Route path='/about' component={About}/>
+                    <Route path="/category/:categoryName" component={Category}/>
                     <Route path='*' component={Page404}/>
                 </Switch>
             </div>

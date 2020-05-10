@@ -6,6 +6,7 @@ import Category from './pages/Category';
 import Login from './pages/Login'
 import About from './pages/About';
 import Page404 from './pages/Page404';
+import Cart from "./pages/Cart";
 
 class App extends React.Component {
     render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
                     <Route path='/login' component={Login}/>
                     <Route path='/about' component={About}/>
                     <Route path="/category/:categoryName" component={Category}/>
+                    <Route path='/cart' component={Cart}/>
                     <Route path='*' component={Page404}/>
                 </Switch>
             </div>

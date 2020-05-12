@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 import products from '../utils/products.json'
 import ProductList from '../components/ProductList';
@@ -14,7 +14,7 @@ class Category extends React.Component {
 
     componentDidMount() {
         const {match} = this.props;
-        const categoryName = match.params.name;
+        const categoryName = match.params.categoryName;
         this.setState({
             category: products[categoryName],
             items: products[categoryName].items,

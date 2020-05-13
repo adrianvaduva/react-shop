@@ -1,6 +1,15 @@
+import * as types from "./actionTypes"
+
 export function addToCart(payload) {
     return {
-        type: 'ADD_TO_CART',
+        type: types.ADD_TO_CART,
+        payload
+    }
+}
+
+export function removeFromCart(payload) {
+    return {
+        type: types.REMOVE_FROM_CART,
         payload
     }
 }

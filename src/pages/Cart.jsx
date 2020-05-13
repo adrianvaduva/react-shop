@@ -3,6 +3,8 @@ import Layout from '../components/Layout';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import './Cart.css';
+import {removeFromCart} from '../redux/actions/cart';
+import { ReactComponent as Close } from '../assets/icons/close.svg';
 
 function Cart(props) {
     return (
@@ -25,12 +27,17 @@ function Cart(props) {
                                             <p>{product.name}</p>
                                         </div>
                                         <p className="w-25">{product.price} {product.currency}</p>
+                                        <div className="w-25 d-flex justify-content-center">
+                                            <div onClick={() => props.removeFromCart({id: product.id})}>
+                                                <Close/>
+                                            </div>
+                                        </div>
                                     </div>
                                 })
                             }
                         </div>
                         : <div className="d-flex flex-column align-items-center">
-                            <p className="h3">Nu ai produse in cart!</p>
+                            <p className="h3">Nu exista produse in cos!</p>
                             <Link to="/">
                                 <button className="btn btn-outline-dark">Inapoi la home</button>
                             </Link>
@@ -47,4 +54,10 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(Cart);
+function mapDispatchToProps(dispatch) {
+    return {
+        removeFromCart: (payload) => dispatch(removeFromCart(payload))
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

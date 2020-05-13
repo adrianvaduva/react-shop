@@ -1,3 +1,5 @@
+import * as types from "../actions/actionTypes"
+
 const initialState = {
     data: null,
     loading: false,
@@ -6,18 +8,18 @@ const initialState = {
 
 export function userReducer(state = initialState, action) {
     switch (action.type) {
-        case 'START_LOADING':
+        case types.START_LOADING:
             return {
                 ...state,
                 loading: true
             }
-        case 'UPDATE_USER_DATA':
+        case types.UPDATE_USER_DATA:
             return {
                 ...state,
                 data: action.payload,
                 loading: false
             }
-        case 'UPDATE_ERROR':
+        case types.UPDATE_ERROR:
             return {
                 ...state,
                 error: action.payload,

@@ -1,0 +1,6 @@
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const START_LOADING = "START_LOADING";
+export const UPDATE_USER_DATA = "UPDATE_USER_DATA";
+export const UPDATE_ERROR = "UPDATE_ERROR";
+

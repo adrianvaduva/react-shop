@@ -1,10 +1,10 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import './Cart.css';
-import {removeFromFavorites} from '../redux/actions/favorites';
-import { ReactComponent as Close } from '../assets/icons/close.svg';
+import '../Cart/Cart.css';
+import { ReactComponent as Close } from '../../assets/icons/close.svg';
+import {removeFromFavorites} from "../../redux/favorites/FavoritesActions";
 
 function Favorites(props) {
     return (
@@ -17,6 +17,7 @@ function Favorites(props) {
                             <div className="d-flex justify-content-between text-center h4 text-bold">
                                 <p className="w-25">Produs</p>
                                 <p className="w-25">Pret</p>
+                                <p className="w-25"> </p>
                             </div>
                             {
                                 props.products.map(product => {

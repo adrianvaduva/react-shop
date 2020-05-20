@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import products from '../utils/products.json'
-import ProductList from '../components/ProductList';
+import Layout from '../../components/Layout/Layout';
+import products from '../../utils/products.json'
+import ProductList from "../../components/ProductList/ProductList";
 
 class Category extends React.Component {
     constructor(props) {

@@ -1,8 +1,8 @@
 import React from 'react';
-import Layout from "../components/Layout";
-import HomeCategory from "../components/HomeCategory";
-import products from "../utils/products.json"
-import '../utils/utility-classes.css'
+import Layout from "../../components/Layout/Layout";
+import products from "../../utils/products.json"
+import '../../utils/utility-classes.css'
+import HomeCategory from "../../components/HomeCategory/HomeCategory";
 
 class Home extends React.Component {
     constructor() {

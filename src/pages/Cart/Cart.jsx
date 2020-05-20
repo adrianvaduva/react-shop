@@ -1,10 +1,11 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import './Cart.css';
-import {removeFromCart} from '../redux/actions/cart';
-import {ReactComponent as Close} from '../assets/icons/close.svg';
+
+import {ReactComponent as Close} from '../../assets/icons/close.svg';
+import {removeFromCart} from "../../redux/cart/CartActions";
 
 function Cart(props) {
     const total = props.products.reduce((accumulator, product) => {

@@ -1,4 +1,4 @@
-import * as types from "./actionTypes"
+import * as types from "./CartConstants"
 
 export function addToCart(payload) {
     return {

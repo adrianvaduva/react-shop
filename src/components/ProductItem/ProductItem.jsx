@@ -1,19 +1,17 @@
 import React from 'react';
 import './ProductItem.css';
 import {Link} from 'react-router-dom';
-
 import {connect} from 'react-redux';
-import {addToCart} from '../redux/actions/cart';
-import {addToFavorites, removeFromFavorites} from "../redux/actions/favorites";
+import {addToFavorites, removeFromFavorites} from "../../redux/favorites/FavoritesActions";
+import {addToCart} from "../../redux/cart/CartActions";
 
 function ProductItem(props) {
     const {id, name, price, currency, image, addToCart, addToFavorites, favoriteProducts, removeFromFavorites} = props;
-    console.log(favoriteProducts)
 
     const existsInFavorites = favoriteProducts.find(product => product.id === id);
 
     return (
-        <div className="product-item col-4 d-flex flex-column align-items-center">
+        <div className="product-item col-12 col-md-4 mb-3 d-flex flex-column align-items-center">
             <Link to={`/product/${id}`} className="text-dark d-flex flex-column align-items-center">
                 <img src={image} alt="productPhoto" className="mb-2"/>
                 <p className="mb-1 text-center">{name}</p>
@@ -26,24 +24,24 @@ function ProductItem(props) {
                         }
                     )}
             >
-                Add to cart
+                Adauga in cos
             </button>
             {existsInFavorites ?
-                <button className="btn btn-outline-dark"
+                <button className="btn btn-dark mb-2"
                         onClick={() => removeFromFavorites(
                             {id: id}
                         )}
                 >
-                    Remove from Favorites
+                    Sterge de la favorite
                 </button>
-                : <button className="btn btn-outline-dark"
+                : <button className="btn btn-outline-dark mb-2"
                           onClick={() => addToFavorites(
                               {
                                   product: {id, name, price, currency, image}
                               }
                           )}
                 >
-                    Add to Favorites
+                    Adauga la favorite
                 </button>}
         </div>
     );

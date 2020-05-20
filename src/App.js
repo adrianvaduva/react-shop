@@ -8,6 +8,7 @@ import Page404 from './pages/Page404';
 import Category from './pages/Category';
 import Cart from './pages/Cart';
 import './utils/utility-classes.css';
+import Favorites from "./pages/Favorites";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route exact path='/' component={Home}/>
                 <Route path='/login' component={Login}/>
                 <Route path="/cart" component={Cart}/>
+                <Route path="/favorites" component={Favorites}/>
                 <Route path='/about' component={About}/>
                 <Route path='/category/:categoryName' component={Category}/>
                 <Route path='*' component={Page404}/>

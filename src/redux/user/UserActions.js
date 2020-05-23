@@ -1,4 +1,4 @@
-import {signInWithGoogle, signOut} from '../../apis/firebase'
+import {signIn, signOut} from '../../apis/firebase'
 
 export function startLoading() {
     return {
@@ -20,11 +20,11 @@ export function updateError(payload) {
     }
 }
 
-export function loginUser() {
+export function loginUser(provider) {
     return (dispatch) => {
         dispatch(startLoading());
 
-        signInWithGoogle().then((response) => {
+        signIn(provider).then((response) => {
             dispatch(updateUserData(response.user));
         }).catch((error) => {
             dispatch(updateError(error));

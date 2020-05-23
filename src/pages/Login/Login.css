@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.login-page img {
+.login-page .logo {
     margin-top: 20vh;
     width: 200px;
 }

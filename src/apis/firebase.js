@@ -4,9 +4,7 @@ import firebaseConfig from '../configs/firebase';
 
 firebase.initializeApp(firebaseConfig);
 
-var provider = new firebase.auth.GoogleAuthProvider();
-
-export function signInWithGoogle() {
+export function signIn(provider) {
     return firebase.auth().signInWithPopup(provider);
 }
 

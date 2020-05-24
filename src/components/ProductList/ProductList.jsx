@@ -5,8 +5,7 @@ const ProductList = (props) => {
     const {products} = props;
 
     return (
-        <div className="col-12 col-md-9">
-            <div className="row">
+            <div className="row my-4">
                 {products
                     ? products.map((product) => {
                         return <ProductItem
@@ -16,7 +15,6 @@ const ProductList = (props) => {
                     })
                     : null
                 }
-            </div>
         </div>
     );
 }

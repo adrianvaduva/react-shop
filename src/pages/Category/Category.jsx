@@ -26,9 +26,7 @@ class Category extends React.Component {
             <Layout>
                 <div className="content-min-height container-fluid container-min-max-width">
                     <h2>{this.state.category.name}</h2>
-                    <div className="row">
                         <ProductList products={this.state.items}/>
-                    </div>
                 </div>
             </Layout>
         );

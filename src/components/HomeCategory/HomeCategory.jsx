@@ -8,8 +8,8 @@ function HomeCategory(props) {
             <Link to={`/category/${route}`} className="text-dark">
 
                 <img className="w-100" src={image} alt={name}/>
-                <h1 className="h2 my-2">{name}</h1>
-                <p>{description}</p>
+                <h2 className="h4 my-1"><strong>{name}</strong></h2>
+                <p className="m-0">{description}</p>
             </Link>
         </div>
     );

@@ -10,7 +10,7 @@ function Footer() {
     return (
         <footer className="pt-3 bg-light">
             <div className="container-fluid container-min-max-width d-flex justify-content-between">
-                <div className="d-flex flex-column">
+                <div className="footer-group d-flex flex-column">
                     <h3 className="h5">Link-uri rapide:</h3>
                     <Link to='/about'>Despre</Link>
                     <Link to='/terms-and-conditions'>Termeni și condiții</Link>
@@ -34,7 +34,7 @@ function Footer() {
                         </a>
                     </p>
                     <p className="m-0">
-                        <a href="https://www.linkedin.com/in/adrian-vaduva-61670948/" className="text-dark">
+                        <a href="https://www.linkedin.com/in/adrian-vaduva-61670948/">
                             <LinkedIn className="mr-1 footer-icon"/>
                             adrianvaduva
                         </a>
